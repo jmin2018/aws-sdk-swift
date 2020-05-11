@@ -167,11 +167,11 @@ extension SQS {
         ]
 
         /// A list of  BatchResultErrorEntry  items.
-        public let failed: [BatchResultErrorEntry]
+        public let failed: [BatchResultErrorEntry]?
         /// A list of  ChangeMessageVisibilityBatchResultEntry  items.
-        public let successful: [ChangeMessageVisibilityBatchResultEntry]
+        public let successful: [ChangeMessageVisibilityBatchResultEntry]?
 
-        public init(failed: [BatchResultErrorEntry], successful: [ChangeMessageVisibilityBatchResultEntry]) {
+        public init(failed: [BatchResultErrorEntry]? = nil, successful: [ChangeMessageVisibilityBatchResultEntry]? = nil) {
             self.failed = failed
             self.successful = successful
         }
@@ -304,11 +304,11 @@ extension SQS {
         ]
 
         /// A list of  BatchResultErrorEntry  items.
-        public let failed: [BatchResultErrorEntry]
+        public let failed: [BatchResultErrorEntry]?
         /// A list of  DeleteMessageBatchResultEntry  items.
-        public let successful: [DeleteMessageBatchResultEntry]
+        public let successful: [DeleteMessageBatchResultEntry]?
 
-        public init(failed: [BatchResultErrorEntry], successful: [DeleteMessageBatchResultEntry]) {
+        public init(failed: [BatchResultErrorEntry]? = nil, successful: [DeleteMessageBatchResultEntry]? = nil) {
             self.failed = failed
             self.successful = successful
         }
